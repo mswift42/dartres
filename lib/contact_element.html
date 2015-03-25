@@ -1,0 +1,47 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/core_elements/core_media_query.html">
+<link rel="import" href="../../packages/core_elements/core_icons.html">
+<link rel="import" href="../../packages/core_elements/core_item.html">
+
+<polymer-element name="contact-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <!-- Template content here -->
+        <div class="contactcontainer">
+      <div class="contactelement" >
+        <!-- <core-media-query query="max-width: 640px"
+        queryMatches="{{phoneScreen}}"></core-media-query>
+        <div layout vertical?="{{phoneScreen}}"
+        horizontal?="{{!phoneScreen}}"> -->
+      <div class="contact" auto-vertical flex three self-center>
+        <div class="contheader"  >
+          <h2 >Contact</h2>
+          </div>
+        </div>
+        <div class="phoneandmail"  auto-vertical layout flex four>
+          <div class="contactname" >
+          <h2 >Martin Haesler</h2>
+          </div>
+          <div class="email" layout horizontal >
+            <core-item icon="mail" label="martin.haesler@gmail.com" flex self-start>
+              <a href="martin.haesler@gmail.com" target="_self"></a>
+            </core-item>
+          </div>
+          <div class="phone" layout horizontal  >
+            <core-item icon="settings-phone" label="07858 242169" flex self-start>
+            </core-item>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </template>
+  <script type="application/dart" src="contact_element.dart"></script>
+</polymer-element>
