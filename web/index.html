@@ -29,7 +29,12 @@
 
   <!-- example of using a paper element -->
   <link rel="import" href="packages/paper_elements/roboto.html">
-
+  <link rel="import" href="packages/core_elements/core_scaffold.html">
+  <link rel="import" href="packages/core_elements/core_menu.html">
+  <link rel="import" href="packages/core_elements/core_header_panel.html">
+  <link rel="import" href="packages/core_elements/core_toolbar.html">
+  <link rel="import" href="packages/core_elements/core_icons.html">
+  <link rel="import" href="packages/core_elements/core_item.html">
   <!-- example of your own custom element -->
   <link rel="import" href="packages/dartres/contact_element.html">
 
@@ -37,9 +42,23 @@
 </head>
 
 <body unresolved>
+        <core-scaffold>
+            <core-header-panel navigation flex mode="seamed">
+                <core-toolbar>Index</core-toolbar>
+                <core-menu theme="core-light-theme">
+                    <core-item icon="account-circle" label="Contact"><a href="#contact" target="_self"></a></core-item>
+                    <core-item icon="info" label="About Martin Haesler"><a href="#about" target="_self"></a></core-item>
+                    <core-item icon="stars" label="Notable Projects"><a href="#projects" target="_self"></a></core-item>
+                    <core-item icon="work" label="Work Experience"><a href="#work" target="_self"></a></core-item>
+                    <core-item icon="wallet-travel" label="Education"><a href="#education" target="_self"></a></core-item>
+                    <core-item icon="grade" label="Awards"><a href="#awards" target="_self"></a></core-item>
+                    <core-item icon="assessment" label="Skills"><a href="#skills" target="_self"></a></core-item>
+                </core-menu>
+            </core-header-panel>
+            <div tool>Resume</div>
 
-
-  <contact-element></contact-element>
+            <contact-element></contact-element>
+        </core-scaffold>
 
   <script type="application/dart">export 'package:polymer/init.dart';</script>
 </body>
