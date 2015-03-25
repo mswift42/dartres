@@ -7,25 +7,25 @@
 <polymer-element name="contact-element">
   <template>
     <style>
-      :host {
-        display: block;
-      }
+     :host {
+       display: block;
+     }
     </style>
     <!-- Template content here -->
-        <div class="contactcontainer">
+    <div class="contactcontainer">
       <div class="contactelement" >
         <!-- <core-media-query query="max-width: 640px"
         queryMatches="{{phoneScreen}}"></core-media-query>
         <div layout vertical?="{{phoneScreen}}"
         horizontal?="{{!phoneScreen}}"> -->
-      <div class="contact" auto-vertical flex three self-center>
-        <div class="contheader"  >
-          <h2 >Contact</h2>
+        <div class="contact" auto-vertical flex three self-center>
+          <div class="contheader"  >
+            <h2 >Contact</h2>
           </div>
         </div>
         <div class="phoneandmail"  auto-vertical layout flex four>
           <div class="contactname" >
-          <h2 >Martin Haesler</h2>
+            <h2 >Martin Haesler</h2>
           </div>
           <div class="email" layout horizontal >
             <core-item icon="mail" label="martin.haesler@gmail.com" flex self-start>
@@ -37,10 +37,7 @@
             </core-item>
           </div>
         </div>
-          </div>
-        </div>
       </div>
-    </div>
     </div>
   </template>
   <script type="application/dart" src="contact_element.dart"></script>
