@@ -6,7 +6,12 @@ import 'package:polymer/polymer.dart';
 @CustomTag('work-experiences')
 
 class WorkExperiences extends PolymerElement {
-  List<Map> workexps =
+ @observable List<Map<String,String>> workexps;
+
+
+  /// Constructor used to create instance of WorkExperiences.
+  WorkExperiences.created() : super.created() {
+    workexps = toObservable(
     [
               {
                   "company" : "Pfeiffer & May",
@@ -26,11 +31,7 @@ class WorkExperiences extends PolymerElement {
                   "position" : "Apprenticeship",
                   "worksummary" : "Apprenticeship with Pfeiffer & May. Graduated as Wholesale and Foreign Trade merchant."
               }
-          ];
-
-
-  /// Constructor used to create instance of WorkExperiences.
-  WorkExperiences.created() : super.created() {
+          ]);
   }
 
   /*
