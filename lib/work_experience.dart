@@ -6,6 +6,10 @@ import 'package:polymer/polymer.dart';
 @CustomTag('work-experience')
 
 class WorkExperience extends PolymerElement {
+  @published String company = '';
+  @published String years = '';
+  @published String position = '';
+  @published String worksummary = '';
 
   /// Constructor used to create instance of WorkExperience.
   WorkExperience.created() : super.created() {
