@@ -14,8 +14,8 @@
       <h2 id="workexpheader">Work Experience</h2>
     </div>
     <template repeat="{{exp in workexps}}">
-                <work-experience company={{exp['company']}} years={{exp['years']}}
-                            position={{exp['position']}} worksummary={{exp['worksummary']}}>
+                <work-experience company="{{exp['company']}}" years="{{exp['years']}}"
+                            position="{{exp['position']}}" worksummary="{{exp['worksummary']}}">
           </work-experience>
     </template>
   </template>
