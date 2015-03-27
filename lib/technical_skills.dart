@@ -6,9 +6,26 @@ import 'package:polymer/polymer.dart';
 @CustomTag('technical-skills')
 
 class TechnicalSkills extends PolymerElement {
-
+  @observable List<Map> skills;
   /// Constructor used to create instance of TechnicalSkills.
   TechnicalSkills.created() : super.created() {
+    skills = toObservable(
+        [
+              {
+                  "subsection": "Programming Languages",
+                  "skill" : ["Python","Go","Common Lisp", "Clojure",
+                             "Javascript","Haskell", "Elisp", ]
+              },
+              {
+                  "subsection": "Web Development",
+                  "skill" : ["Html","CSS", "Javascript","Dart",
+                  "AngularJS", "ClojureScript"]
+              },
+              {
+                  "subsection" : "Other",
+                  "skill" : ["Linux", "Bash", "Latex", "Emacs", "Vim"]
+              }
+        ]);
   }
 
   /*
