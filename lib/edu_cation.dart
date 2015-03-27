@@ -6,6 +6,8 @@ import 'package:polymer/polymer.dart';
 @CustomTag('edu-cation')
 
 class EduCation extends PolymerElement {
+  @published String years = '';
+  @published String schoolname = '';
 
   /// Constructor used to create instance of EduCation.
   EduCation.created() : super.created() {
