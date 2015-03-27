@@ -9,6 +9,25 @@
       }
     </style>
     <!-- Template content here -->
+        <div>
+      <h2 id="skillheader">Technical Skills</h2>
+      </div>
+      <template repeat="{{s in skills}}">
+          <div vertical layout>
+          <div id="skillscontainer" horizontal layout around-justified>
+              <div class="header" flex three>
+                  <h5>{{s['subsection']}}</h5>
+              </div>
+              <div class="skills" flex six>
+                <div class="container">
+              <template repeat="{{l in s['skill']}}">
+                  <span>{{l}}</span>
+              </template>
+              </div>
+              </div>
+              </div>
+          </div>
+      </template>
   </template>
   <script type="application/dart" src="technical_skills.dart"></script>
 </polymer-element>
