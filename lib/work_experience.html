@@ -1,7 +1,7 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
 
-<polymer-element name="work-experience">
+<polymer-element name="work-experience" attributes="company years position worksummary">
   <template>
     <style>
       :host {
@@ -9,6 +9,24 @@
       }
     </style>
     <!-- Template content here -->
+          <div id="workexpcontainer" vertical layout>
+          <div id="companyposition" horizontal layout>
+              <div id="company" flex two>
+                  <h4>{{company}}</h4>
+              </div>
+              <div id="postion" flex three>
+                  <h4>{{position}}</h4>
+              </div>
+          </div>
+          <div id="yearssummary" horizontal layout>
+              <div id="years" flex >
+                  <p>{{years}}</p>
+              </div>
+              <div id="summary" flex four>
+                  <p>{{worksummary}}</p>
+              </div>
+          </div>
+      </div>
   </template>
   <script type="application/dart" src="work_experience.dart"></script>
 </polymer-element>
