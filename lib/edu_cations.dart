@@ -6,9 +6,24 @@ import 'package:polymer/polymer.dart';
 @CustomTag('edu-cations')
 
 class EduCations extends PolymerElement {
+  @observable List<Map<String,String>> schools;
 
   /// Constructor used to create instance of EduCations.
   EduCations.created() : super.created() {
+    schools = toObservable([
+              {
+                  "years" : "1993 - 1995",
+                  "schoolname" : "Berufskolleg II, Villingen-Schwenningen"
+              },
+              {
+                  "years" : "1984 - 1993",
+                  "schoolname" : "Gymnasium, Villingen-Schwenningen"
+              },
+              {
+                  "years" : "1980 - 1984",
+                  "schoolname" : "Elementary School, Villingen-Schwenningen"
+              }
+    ]);
   }
 
   /*

@@ -1,14 +1,22 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/dartres/edu_cation.html">
 
 <polymer-element name="edu-cations">
   <template>
     <style>
-      :host {
-        display: block;
-      }
+     :host {
+       display: block;
+     }
     </style>
-    <!-- Template content here -->
+    <div class="sectionheader">
+      <h2 id="education">Education</h2>
+    </div>
+    <template repeat="{{school in schools}}">
+      <edu-cation years="{{school['years']}}" schoolname="{{school['schoolname']}}">
+        <p> Soem Stuff</p>
+      </edu-cation>
+    </template>
   </template>
   <script type="application/dart" src="edu_cations.dart"></script>
 </polymer-element>
