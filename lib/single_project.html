@@ -9,11 +9,22 @@
       }
     </style>
     <!-- Template content here -->
-
-      <template repeat="{{proj in singleprojects}}">
-      <h2>{{proj.projecttitle}}</h2>
+    <div class="sectionheader">
+      <h2>Personal Projects</h2>
+    </div>
+    <template repeat="{{proj in singleprojects}}">
+      <div class="projtitle">
+        <h2>{{proj.projecttitle}}</h2>
+      </div>
+      <div class="projurl">
       <a _href="{{proj.githuburl}}">Github Link</a>
-      <p>{{proj.shortdescription}}</p>
+      </div>
+      <div class="projimg">
+        <img _src="{{proj.titleimg}}" alt="{{proj.projecttitle}}">
+      </div>
+      <div class="projdesc">
+        <p>{{proj.shortdescription}}</p>
+      </div>
       </template>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
