@@ -22,21 +22,20 @@
       }
     </style>
     <!-- Template content here -->
-            <core-scaffold>
+            <core-scaffold id="scaffold">
             <core-header-panel navigation flex mode="seamed">
                 <core-toolbar>Index</core-toolbar>
                 <core-menu theme="core-light-theme">
-                    <core-item icon="account-circle" label="Contact"><a href="#contact" target="_self"></a></core-item>
-                    <core-item icon="info" label="About Martin Haesler"><a href="#about" target="_self"></a></core-item>
-                    <core-item icon="stars" label="Notable Projects"><a href="#projects" target="_self"></a></core-item>
-                    <core-item icon="work" label="Work Experience"><a href="#work" target="_self"></a></core-item>
-                    <core-item icon="wallet-travel" label="Education"><a href="#education" target="_self"></a></core-item>
-                    <core-item icon="grade" label="Awards"><a href="#awards" target="_self"></a></core-item>
-                    <core-item icon="assessment" label="Skills"><a href="#skills" target="_self"></a></core-item>
+                    <core-item icon="account-circle" label="Contact"><a href="javascript:document.querySelector('html /deep/ #contact').scrollIntoView()" target="_self"></a></core-item>
+                    <core-item icon="info" label="About Martin Haesler"><a href="javascript:document.querySelector('html /deep/ #about').scrollIntoView()" target="_self"></a></core-item>
+                    <core-item icon="stars" label="Notable Projects"><a href="javascript:document.querySelector('html /deep/ #projects').scrollIntoView()" target="_self"></a></core-item>
+                    <core-item icon="work" label="Work Experience"><a href="javascript:document.querySelector('html /deep/ #work').scrollIntoView()" target="_self"></a></core-item>
+                    <core-item icon="wallet-travel" label="Education"><a href="javascript:document.querySelector('html /deep/ #education').scrollIntoView()" target="_self"></a></core-item>
+                    <core-item icon="grade" label="Awards"><a href="javascript:document.querySelector('html /deep/ #awards').scrollIntoView()" target="_self"></a></core-item>
+                    <core-item icon="assessment" label="Skills"><a href="javascript:document.querySelector('html /deep/ #skills').scrollIntoView()" target="_self"></a></core-item>
                 </core-menu>
             </core-header-panel>
             <div tool>Resume</div>
-
             <contact-element id="contact"></contact-element>
             <about-element id="about"></about-element>
             <work-experiences id="work"></work-experiences>

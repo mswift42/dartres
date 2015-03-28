@@ -1,4 +1,5 @@
 import 'package:polymer/polymer.dart';
+import 'dart:html';
 
 /**
  * A Polymer mh-res element.
@@ -9,6 +10,7 @@ class MhRes extends PolymerElement {
 
   /// Constructor used to create instance of MhRes.
   MhRes.created() : super.created() {
+
   }
 
   /*
@@ -29,12 +31,15 @@ class MhRes extends PolymerElement {
   /// mh-res is added, changed, or removed.
   attributeChanged(String name, String oldValue, String newValue) {
   }
-
+  */
   /// Called when mh-res has been fully prepared (Shadow DOM created,
   /// property observers set up, event listeners attached).
   ready() {
+    var scaff = $['scaffold'];
+    scaff.onClick.listen((event) => scaff.closeDrawer());
+    
   }
    
-  */
+
   
 }
