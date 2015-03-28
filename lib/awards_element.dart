@@ -1,4 +1,5 @@
 import 'package:polymer/polymer.dart';
+import 'dart:html';
 
 /**
  * A Polymer awards-element element.
@@ -9,6 +10,8 @@ class AwardsElement extends PolymerElement {
 
   /// Constructor used to create instance of AwardsElement.
   AwardsElement.created() : super.created() {
+
+
   }
 
   /*

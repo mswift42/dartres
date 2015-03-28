@@ -13,10 +13,15 @@ class MainApp extends PolymerElement {
 
   /// Constructor used to create instance of MainApp.
   MainApp.created() : super.created();
+  
+  
+  
+  
+    
 
-  void reverseText(Event event, Object object, PaperInput target) {
-    reversed = target.value.split('').reversed.join('');
-  }
+  // void reverseText(Event event, Object object, PaperInput target) {
+  //   reversed = target.value.split('').reversed.join('');
+  // }
 
   // Optional lifecycle methods - uncomment if needed.
 
