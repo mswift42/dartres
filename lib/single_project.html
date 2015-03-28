@@ -1,5 +1,7 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/html_components/multimedia/lightbox.html">
+
 
 <polymer-element name="single-project">
   <template>
@@ -9,6 +11,17 @@
       }
     </style>
     <!-- Template content here -->
+    <h-lightbox>
+      <template repeat="{{proj in singleprojects}}">
+      <a _href="{{proj.titleimg}}" title="{{proj.projecttitle}}">
+        <img _src="{{proj.titleimg}}" alt="{{proj.shortdescription}}">
+      </a>
+      </template>
+    </h-lightbox>
+      <template repeat="{{proj in singleprojects}}">
+      <h2>{{proj.projecttitle}}</h2>
+      <p>{{proj.githuburl}}</p>
+      </template>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
 </polymer-element>
