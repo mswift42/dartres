@@ -1,0 +1,49 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+  <link rel="import" href="../../packages/paper_elements/roboto.html">
+  <link rel="import" href="../../packages/core_elements/core_scaffold.html">
+  <link rel="import" href="../../packages/core_elements/core_menu.html">
+  <link rel="import" href="../../packages/core_elements/core_header_panel.html">
+  <link rel="import" href="../../packages/core_elements/core_toolbar.html">
+  <link rel="import" href="../../packages/core_elements/core_icons.html">
+  <link rel="import" href="../../packages/core_elements/core_item.html">
+  <!-- example of your own custom element -->
+  <link rel="import" href="../../packages/dartres/contact_element.html">
+  <link rel="import" href="../../packages/dartres/about_element.html">
+  <link rel="import" href="../../packages/dartres/work_experiences.html">
+  <link rel="import" href="../../packages/dartres/edu_cations.html">
+  <link rel="import" href="../../packages/dartres/technical_skills.html">
+  <link rel="import" href="../../packages/dartres/awards_element.html">
+<polymer-element name="mh-res">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <!-- Template content here -->
+            <core-scaffold>
+            <core-header-panel navigation flex mode="seamed">
+                <core-toolbar>Index</core-toolbar>
+                <core-menu theme="core-light-theme">
+                    <core-item icon="account-circle" label="Contact"><a href="#contact" target="_self"></a></core-item>
+                    <core-item icon="info" label="About Martin Haesler"><a href="#about" target="_self"></a></core-item>
+                    <core-item icon="stars" label="Notable Projects"><a href="#projects" target="_self"></a></core-item>
+                    <core-item icon="work" label="Work Experience"><a href="#work" target="_self"></a></core-item>
+                    <core-item icon="wallet-travel" label="Education"><a href="#education" target="_self"></a></core-item>
+                    <core-item icon="grade" label="Awards"><a href="#awards" target="_self"></a></core-item>
+                    <core-item icon="assessment" label="Skills"><a href="#skills" target="_self"></a></core-item>
+                </core-menu>
+            </core-header-panel>
+            <div tool>Resume</div>
+
+            <contact-element id="contact"></contact-element>
+            <about-element id="about"></about-element>
+            <work-experiences id="work"></work-experiences>
+            <edu-cations id="education"></edu-cations>
+            <awards-element id="awards"></awards-element>
+            <technical-skills id="skills"></technical-skills>
+        </core-scaffold>
+  </template>
+  <script type="application/dart" src="mh_res.dart"></script>
+</polymer-element>
