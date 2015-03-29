@@ -1,4 +1,5 @@
 import 'package:polymer/polymer.dart';
+import 'projectinfomodel.dart' show metalheadprojectinfo;
 
 /**
  * A Polymer project-info element.
@@ -6,6 +7,7 @@ import 'package:polymer/polymer.dart';
 @CustomTag('project-info')
 
 class ProjectInfo extends PolymerElement {
+  @observable List<ProjectInfo> mhprojects = toObservable(metalheadprojectinfo);
 
   /// Constructor used to create instance of ProjectInfo.
   ProjectInfo.created() : super.created() {
