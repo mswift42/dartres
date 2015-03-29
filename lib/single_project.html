@@ -6,9 +6,23 @@
     <style>
       :host {
         display: block;
+        width:100%;
       }
+     .projimg {
+
+       width:95%;
+       height:auto;
+     }
+     .projimg > img {
+       max-width:60%;
+       width:auto;
+       height:auto;
+       margin:0 auto;
+       }
+       
     </style>
     <!-- Template content here -->
+    <div class="projcontainer" layout vertical center>
     <div class="sectionheader">
       <h2>Personal Projects</h2>
     </div>
@@ -19,13 +33,15 @@
       <div class="projurl">
       <a _href="{{proj.githuburl}}">Github Link</a>
       </div>
-      <div class="projimg">
+      <div class="projimg" center-center>
         <img _src="{{proj.titleimg}}" alt="{{proj.projecttitle}}">
       </div>
       <div class="projdesc">
         <p>{{proj.shortdescription}}</p>
       </div>
-      </template>
+
+    </template>
+    </div>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
 </polymer-element>

@@ -5,7 +5,7 @@ import 'package:polymer/polymer.dart';
 class SingleProject extends Observable {
   @observable String projecttitle;
   @observable String githuburl;
-  @observxoable String shortdescription;
+  @observable String shortdescription;
   @observable String titleimg;
 
   SingleProject(
