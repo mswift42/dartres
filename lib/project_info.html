@@ -9,6 +9,13 @@
       }
     </style>
     <!-- Template content here -->
+    <template repeat="{{i in mhprojects}}">
+    <h3>{{i.projecttitle}}</h3>
+    <template repeat="{{j in i.projectdetails}}">
+      <img _src="{{j.detailpic}}">
+      <p>{{j.detaileddescription}}</p>
+      </template>
+      </template>
   </template>
   <script type="application/dart" src="project_info.dart"></script>
 </polymer-element>
