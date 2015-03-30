@@ -6,42 +6,42 @@
     <style>
       :host {
         display: block;
-        width:100%;
       }
      .projimg {
 
-       width:95%;
-       height:auto;
+       width:50%;
+       padding:5em;
+       margin:0 auto;
      }
      .projimg > img {
-       max-width:60%;
-       width:auto;
+       
+       width:100%;
        height:auto;
-       margin:0 auto;
+
        }
        
     </style>
     <!-- Template content here -->
-    <div class="projcontainer" layout vertical center>
+
     <div class="sectionheader">
       <h2>Personal Projects</h2>
     </div>
     <template repeat="{{proj in singleprojects}}">
+          <div class="projcontainer" layout vertical center>
       <div class="projtitle">
         <h2>{{proj.projecttitle}}</h2>
       </div>
       <div class="projurl">
       <a _href="{{proj.githuburl}}">Github Link</a>
       </div>
-      <div class="projimg" center-center>
-        <img _src="{{proj.titleimg}}" alt="{{proj.projecttitle}}">
+      <div class="projimg"  >
+        <img _src="{{proj.titleimg}}" alt="{{proj.projecttitle}}" >
       </div>
       <div class="projdesc">
         <p>{{proj.shortdescription}}</p>
       </div>
-
+          </div>
     </template>
-    </div>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
 </polymer-element>
