@@ -20,6 +20,6 @@ List<SingleProject> projects = [
       "Emacs Theme Creator is a lets you quickly create themes for Emacs.",
       "../images/themecreator/tc1.png"),
   new SingleProject("Beebster", "https://github.com/mswift42/go-beebster",
-      "Beebset is a Web Gui for the command line app get_iplayer.",
+      "Beebster is a Web Gui for the command line app get_iplayer.",
       "../images/beebster/beeb1.png")
 ];
