@@ -24,3 +24,10 @@ List<ProjectInfo> metalheadprojectinfo = [
     new ProjectDetail("../images/metalhead/metalheadworld2.png",
         "This is an example of a MetalHead location instance. It shows the name, its two descriptions, lists for unconditional and conditional exits, in this case you can only go south, if you have a key for the cellar door, and a list of flags.")])
   ];
+
+List<ProjectInfo> themecreatorinfo = [
+  new ProjectInfo("theme creator", [
+    new ProjectDetail("../images/themecreator/themecreatorcolorinput.png", "Example of the input fields for Emacs Faces. It starts with the Face Name, followed by the color preview and the input tag."),
+    new ProjectDetail("../images/themecreator/themecreatortemplate.png",
+        "The elisp code template that get's populated with the selected faces, themename, authorname, url, etc. The template is created using Go's text/template library, the mustache bars enclose variables that get passed to the template as a map binding the variables to its values.")])];
+List<ProjectInfo> beebsterinfo = [];
