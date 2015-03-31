@@ -1,11 +1,14 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/dartres/section_header.html">
+<link rel="import" href="../../packages/dartres/res_section.html">
 
 <polymer-element name="single-project">
   <template>
     <style>
       :host {
         display: block;
+        background-color:#fafafa;
       }
      .projimg {
 
@@ -18,12 +21,15 @@
        width:100%;
        height:auto;
 
-       }
+     }
+
        
     </style>
-    <div class="sectionheader">
+    <res-section>
+    <section-header>
       <h2>Personal Projects</h2>
-    </div>
+    </section-header>
+
     <template repeat="{{proj in singleprojects}}">
           <div class="projcontainer" layout vertical center>
       <div class="projtitle">
@@ -40,6 +46,7 @@
       </div>
           </div>
     </template>
+    </res-section>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
 </polymer-element>
