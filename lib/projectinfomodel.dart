@@ -29,5 +29,7 @@ List<ProjectInfo> themecreatorinfo = [
   new ProjectInfo("theme creator", [
     new ProjectDetail("../images/themecreator/themecreatorcolorinput.png", "Example of the input fields for Emacs Faces. It starts with the Face Name, followed by the color preview and the input tag."),
     new ProjectDetail("../images/themecreator/themecreatortemplate.png",
-        "The elisp code template that get's populated with the selected faces, themename, authorname, url, etc. The template is created using Go's text/template library, the mustache bars enclose variables that get passed to the template as a map binding the variables to its values.")])];
+        "The elisp code template that get's populated with the selected faces, themename, authorname, url, etc. The template is created using Go's text/template library, the mustache bars enclose variables that get passed to the template as a map binding the variables to its values."),
+    new ProjectDetail("../images/themecreator/themecreatortest1.png",
+        "This is one of the tests for the random color handlers. The response to a request to the url '/randomcolorswarm' gets recorded and checked that the response's body contains the strings 'randbuiltin' and 'randkey'.")])];
 List<ProjectInfo> beebsterinfo = [];
