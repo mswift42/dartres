@@ -1,5 +1,7 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/dartres/section_header.html">
+<link rel="import" href="../../packages/dartres/res_section.html">
 
 <polymer-element name="technical-skills">
   <template>
@@ -9,9 +11,10 @@
       }
     </style>
     <!-- Template content here -->
-        <div>
-      <h2 id="skillheader">Technical Skills</h2>
-      </div>
+    <res-section>
+      <section-header>
+      <h2>Technical Skills</h2>
+      </section-header>
       <template repeat="{{s in skills}}">
           <div vertical layout>
           <div id="skillscontainer" horizontal layout around-justified>
@@ -28,6 +31,7 @@
               </div>
           </div>
       </template>
+    </res-section>
   </template>
   <script type="application/dart" src="technical_skills.dart"></script>
 </polymer-element>
