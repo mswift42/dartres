@@ -1,5 +1,7 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/dartres/res_section.html">
+<link rel="import" href="../../packages/dartres/section_header.html">
 
 <polymer-element name="awards-element">
   <template>
@@ -9,9 +11,10 @@
       }
     </style>
     <!-- Template content here -->
-        <div class="awardheader">
+    <res-section>
+    <section-header>
       <h2 id="aw">Awards</h2>
-    </div>
+    </section-header>
     <div class="awards" >
       <div class="awardtitle">
         <h4>Certificate of Awesome</h4>
@@ -20,7 +23,8 @@
         <span>Certificate of Awesome, awarded for a notably superior achievement
           in the Lisp in Summer Projects 2013 Programming competition.</span>
       </div>
-     </div>
+    </div>
+    </res-section>
   </template>
   <script type="application/dart" src="awards_element.dart"></script>
 </polymer-element>
