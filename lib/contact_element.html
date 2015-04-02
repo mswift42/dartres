@@ -3,23 +3,18 @@
 <link rel="import" href="../../packages/core_elements/core_media_query.html">
 <link rel="import" href="../../packages/core_elements/core_icons.html">
 <link rel="import" href="../../packages/core_elements/core_item.html">
+<link rel="import" href="../../packages/dartres/res_section.html">
+<link rel="import" href="../../packages/dartres/section_header.html">
 
 <polymer-element name="contact-element">
   <template>
     <style>
      :host {
        display: block;
-       margin:0 auto;
-       padding:1em;
-       background-color:#fafafa;
      }
-     .contactcontainer {
-       width:80%;
-       margin:0 auto;
-       }
     </style>
     <!-- Template content here -->
-    <div class="contactcontainer">
+    <res-section>
       <div class="contactelement" >
         <!-- <core-media-query query="max-width: 640px"
         queryMatches="{{phoneScreen}}"></core-media-query>
@@ -45,7 +40,8 @@
           </div>
         </div>
       </div>
-    </div>
+
+    </res-section>
   </template>
   <script type="application/dart" src="contact_element.dart"></script>
 </polymer-element>
