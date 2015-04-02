@@ -1,21 +1,20 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
-<link rel="import" href="../../packages/dartres/section_header.html">
 <link rel="import" href="../../packages/dartres/res_section.html">
 
-<polymer-element name="single-project">
+<polymer-element name="single-project" attributes="project">
   <template>
     <style>
       :host {
         display: block;
       }
-     .projimg {
+     .projthumb {
 
        width:50%;
        padding:2em;
        margin:0 auto;
      }
-     .projimg > img {
+     .projthumb > img {
        
        width:100%;
        height:auto;
@@ -25,26 +24,20 @@
        
     </style>
     <res-section>
-    <section-header>
-      <h2>Personal Projects</h2>
-    </section-header>
-
-    <template repeat="{{proj in singleprojects}}">
-          <div class="projcontainer" layout vertical center>
-      <div class="projtitle">
-        <h2>{{proj.projecttitle}}</h2>
+      <div vertical layout>
+        <div class="projectheader">
+          <h3>{{project.projecttitle}}</h3>
+        </div>
+        <div class="projecturl">
+          <a href="{{project.githuburl}}" "Github Url"></a>
+        </div>
+        <div class="projectthumb">
+          <img src="{{project.titleimg}}" alt="{{project.projecttitle}}">
+        </div>
+        <div class="projectdesc">
+          <p>{{project.shortdescription}}</p>
+        </div>
       </div>
-      <div class="projurl">
-      <a _href="{{proj.githuburl}}">Github Link</a>
-      </div>
-      <div class="projimg"  >
-        <img _src="{{proj.titleimg}}" alt="{{proj.projecttitle}}" >
-      </div>
-      <div class="projdesc">
-        <p>{{proj.shortdescription}}</p>
-      </div>
-          </div>
-    </template>
     </res-section>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
