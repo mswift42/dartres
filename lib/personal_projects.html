@@ -16,9 +16,14 @@
       <section-header>
         <h2>Personal Projects</h2>
       </section-header>
-      <single-project project="metalhead"></single-project>
-      <single-project project="themecreator"></single-project>
-      <single-project project="beebster"></single-project>
+      <template repeat="{{i in pprojects}}">
+      <single-project projecttitle="{{i.projecttitle}}"
+                      githuburl="{{i.githuburl}}"
+                      shortdescription="{{i.shortdescription}}"
+                      titleimg="{{i.titleimg}}"></single-project>
+      </template>
+      <!-- <single-project ="{{themecreator}}"></single-project>
+      <single-project project="{{beebster}}"></single-project> -->
     </res-section>
   </template>
   <script type="application/dart" src="personal_projects.dart"></script>
