@@ -2,7 +2,7 @@
 <link rel="import" href="../../packages/polymer/polymer.html">
 <link rel="import" href="../../packages/dartres/res_section.html">
 
-<polymer-element name="single-project" attributes="project">
+<polymer-element name="single-project" attributes="projecttitle githuburl titleimg shortdescription">
   <template>
     <style>
       :host {
@@ -26,16 +26,16 @@
     <res-section>
       <div vertical layout>
         <div class="projectheader">
-          <h3>{{project.projecttitle}}</h3>
+          <h3>{{projecttitle}}</h3>
         </div>
         <div class="projecturl">
-          <a href="{{project.githuburl}}" "Github Url"></a>
+          <a href="{{githuburl}}" ></a>
         </div>
         <div class="projectthumb">
-          <img src="{{project.titleimg}}" alt="{{project.projecttitle}}">
+          <img src="{{titleimg}}" alt="{{projecttitle}}">
         </div>
         <div class="projectdesc">
-          <p>{{project.shortdescription}}</p>
+          <p>{{shortdescription}}</p>
         </div>
       </div>
     </res-section>
