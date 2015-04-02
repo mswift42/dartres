@@ -12,19 +12,19 @@ class SingleProject extends Observable {
       this.projecttitle, this.githuburl, this.shortdescription, this.titleimg);
 }
 
-SingleProject metalhead = new SingleProject("MetalHead",
+SingleProject Metalhead = new SingleProject("MetalHead",
     "https://github.com/mswift42/MetalHead",
     "MetalHead is an old-school text adventure written in Common Lisp for the 2013 Lisp in Summer Projects competition.",
     "../images/metalhead/mh1.png");
 
-SingleProject themecreator = new SingleProject("Theme Creator",
+SingleProject Themecreator = new SingleProject("Theme Creator",
     "https://github.com/mswift42/theme-creator",
     "Emacs Theme Creator is a lets you quickly create themes for Emacs.",
     "../images/themecreator/tc1.png");
 
-SingleProject beebster = new SingleProject("Beebster",
+SingleProject Beebster = new SingleProject("Beebster",
     "https://github.com/mswift42/go-beebster",
     "Beebster is a Web Gui for the command line app get_iplayer.",
     "../images/beebster/beeb1.png");
 
-List<SingleProject> projects = [metalhead, themecreator, beebster];
+List<SingleProject> projects = [Metalhead, Themecreator, Beebster];
