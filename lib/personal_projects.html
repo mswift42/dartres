@@ -1,5 +1,8 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/dartres/single_project.html">
+<link rel="import" href="../../packages/dartres/res_section.html">
+<link rel="import" href="../../packages/dartres/section_header.html">
 
 <polymer-element name="personal-projects">
   <template>
@@ -9,6 +12,14 @@
       }
     </style>
     <!-- Template content here -->
+    <res-section>
+      <section-header>
+        <h2>Personal Projects</h2>
+      </section-header>
+      <single-project project="metalhead"></single-project>
+      <single-project project="themecreator"></single-project>
+      <single-project project="beebster"></single-project>
+    </res-section>
   </template>
   <script type="application/dart" src="personal_projects.dart"></script>
 </polymer-element>
