@@ -1,7 +1,7 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
 
-<polymer-element name="project-info" attributes="projecttitle detailpic detaileddescription">
+<polymer-element name="project-info" attributes="projecttitle details">
   <template>
     <style>
       :host {
@@ -11,8 +11,10 @@
     <!-- Template content here -->
     
     <h3>{{projecttitle}}</h3>
-      <img _src="{{detailpic}}">
-      <p>{{detaileddescription}}</p>
+    <template repeat="{{i in details}}">
+      <img _src="{{i.detailpic}}">
+      <p>{{i.detaileddescription}}</p>
+    </template>
   </template>
   <script type="application/dart" src="project_info.dart"></script>
 </polymer-element>
