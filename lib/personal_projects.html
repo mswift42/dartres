@@ -3,6 +3,7 @@
 <link rel="import" href="../../packages/dartres/single_project.html">
 <link rel="import" href="../../packages/dartres/res_section.html">
 <link rel="import" href="../../packages/dartres/section_header.html">
+<link rel="import" href="../../packages/dartres/project_info.html">
 
 <polymer-element name="personal-projects">
   <template>
@@ -21,6 +22,9 @@
                       githuburl="{{i.githuburl}}"
                       shortdescription="{{i.shortdescription}}"
                       titleimg="{{i.titleimg}}"></single-project>
+      <project-info projecttitle="{{i.projinfo.projecttitle}}"
+                    details="{{i.projinfo.projectdetails}}">
+      </project-info>
       </template>
       <!-- <single-project ="{{themecreator}}"></single-project>
       <single-project project="{{beebster}}"></single-project> -->
