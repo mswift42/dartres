@@ -8,8 +8,7 @@ import 'package:polymer/polymer.dart';
 
 class ProjectInfo extends PolymerElement {
   String projecttitle = '';
-  String detailpic = '';
-  String detaileddescription = '';
+  List details = [];
   
 
   /// Constructor used to create instance of ProjectInfo.
