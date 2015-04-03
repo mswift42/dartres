@@ -12,20 +12,31 @@
      :host {
        display: block;
      }
+     .contactname{
+       text-align:center;
+     }
+     @media (min-width:900px) {
+       .contactcontainer {
+         margin-left:8em;
+         margin-right:8em;
+       }
+       }
+
     </style>
     <!-- Template content here -->
     <res-section>
-      <div class="contactelement" >
+      <div class="contactcontainer">
+      <div class="contactelement" horizontal layout around-justified>
         <!-- <core-media-query query="max-width: 640px"
         queryMatches="{{phoneScreen}}"></core-media-query>
         <div layout vertical?="{{phoneScreen}}"
         horizontal?="{{!phoneScreen}}"> -->
-        <div class="contact" auto-vertical flex three self-center>
+        <div class="contact" layout vertical center-center>
           <div class="contheader"  >
             <h2 >Contact</h2>
           </div>
         </div>
-        <div class="phoneandmail"  auto-vertical layout flex four>
+        <div class="phoneandmail"  vertical layout >
           <div class="contactname" >
             <h2 >Martin Haesler</h2>
           </div>
@@ -40,7 +51,7 @@
           </div>
         </div>
       </div>
-
+</div>
     </res-section>
   </template>
   <script type="application/dart" src="contact_element.dart"></script>
