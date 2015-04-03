@@ -1,17 +1,15 @@
 import 'package:polymer/polymer.dart';
-import 'project_model.dart' show SingleProject,projects;
+import 'project_model.dart' show SingleProject, projects;
 
 /**
  * A Polymer personal-projects element.
  */
 @CustomTag('personal-projects')
-
 class PersonalProjects extends PolymerElement {
   @observable List<SingleProject> pprojects = toObservable(projects);
 
   /// Constructor used to create instance of PersonalProjects.
-  PersonalProjects.created() : super.created() {
-  }
+  PersonalProjects.created() : super.created() {}
 
   /*
    * Optional lifecycle methods - uncomment if needed.
@@ -38,5 +36,5 @@ class PersonalProjects extends PolymerElement {
   }
    
   */
-  
+
 }
