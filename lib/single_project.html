@@ -8,31 +8,33 @@
       :host {
         display: block;
       }
-     .projthumb {
+     .projectthumb {
 
        width:50%;
        padding:2em;
-       margin:0 auto;
+       margin: auto;
      }
-     .projthumb > img {
-       
+     .thumb {
        width:100%;
        height:auto;
-
      }
+     .projectheader {
+       text-align:center;
+       padding:2em;
+       }
 
        
     </style>
     <res-section>
-      <div vertical layout>
+      <div vertical layout center>
         <div class="projectheader">
           <h3>{{projecttitle}}</h3>
         </div>
         <div class="projecturl">
           <a _href="{{githuburl}}" ></a>
         </div>
-        <div class="projectthumb">
-          <img _src="{{titleimg}}" alt="{{projecttitle}}">
+        <div class="projectthumb" center-center >
+          <img _src="{{titleimg}}" class="thumb" alt="{{projecttitle}}" >
         </div>
         <div class="projectdesc">
           <p>{{shortdescription}}</p>
