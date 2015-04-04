@@ -1,4 +1,5 @@
 import 'package:polymer/polymer.dart';
+import 'dart:html';
 import 'project_model.dart' show SingleProject, projects;
 
 /**
@@ -32,9 +33,12 @@ class PersonalProjects extends PolymerElement {
 
   /// Called when personal-projects has been fully prepared (Shadow DOM created,
   /// property observers set up, event listeners attached).
+  */
   ready() {
+    var pages = shadowRoot.querySelector('core-animated-pages');
+    pages.selected = (pages.selected) % pages.children.length;
   }
    
-  */
+
 
 }
