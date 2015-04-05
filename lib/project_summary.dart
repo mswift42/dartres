@@ -1,20 +1,20 @@
 import 'package:polymer/polymer.dart';
-// import 'project_model.dart' show SingleProject, projects;
+
 
 /**
  * A Polymer single-project element.
  */
-@CustomTag('single-project')
+@CustomTag('project-summary')
 
-class SingleProject extends PolymerElement {
-  // @observable List<SingleProject> singleprojects = toObservable(projects);
+class ProjectSummary extends PolymerElement {
   String projecttitle = '';
   String githuburl = '';
   String shortdescription = '';
   String titleimg = '';
 
+
   /// Constructor used to create instance of SingleProject.
-  SingleProject.created() : super.created() {
+  ProjectSummary.created() : super.created() {
   }
 
   /*
