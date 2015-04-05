@@ -1,6 +1,5 @@
 import 'package:polymer/polymer.dart';
-import 'dart:html';
-import 'project_model.dart' show SingleProject, projects;
+import 'project_model.dart' show SingleProject, projects, Metalhead, Themecreator, Beebster;
 
 /**
  * A Polymer personal-projects element.
@@ -8,6 +7,9 @@ import 'project_model.dart' show SingleProject, projects;
 @CustomTag('personal-projects')
 class PersonalProjects extends PolymerElement {
   @observable List<SingleProject> pprojects = toObservable(projects);
+  @observable SingleProject mhead = toObservable(Metalhead);
+  @observable SingleProject tcreator = toObservable(Themecreator);
+  @observable SingleProject beeb = toObservable(Beebster);
 
   /// Constructor used to create instance of PersonalProjects.
   PersonalProjects.created() : super.created() {}
@@ -35,10 +37,9 @@ class PersonalProjects extends PolymerElement {
   /// property observers set up, event listeners attached).
   */
   ready() {
-    var pages = shadowRoot.querySelector('core-animated-pages');
-    pages.selected = (pages.selected) % pages.children.length;
-  }
+    
    
 
 
+}
 }
