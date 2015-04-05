@@ -7,11 +7,11 @@ import 'package:polymer/polymer.dart';
 @CustomTag('single-project')
 
 class SingleProject extends PolymerElement {
-  // @observable List<SingleProject> singleprojects = toObservable(projects);
   String projecttitle = '';
   String githuburl = '';
   String shortdescription = '';
   String titleimg = '';
+  List details = [];
 
   /// Constructor used to create instance of SingleProject.
   SingleProject.created() : super.created() {
@@ -35,12 +35,16 @@ class SingleProject extends PolymerElement {
   /// single-project is added, changed, or removed.
   attributeChanged(String name, String oldValue, String newValue) {
   }
-
+  */
   /// Called when single-project has been fully prepared (Shadow DOM created,
   /// property observers set up, event listeners attached).
   ready() {
+    var pages = shadowRoot.querySelector('core-animated-pages');
+    pages.onClick.listen((event) => pages.selected = (pages.selected + 1) % pages.children.length);
   }
+
+
    
-  */
+
   
 }
