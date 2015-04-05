@@ -1,45 +1,35 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
 <link rel="import" href="../../packages/dartres/res_section.html">
+<link rel="import" href="../../packages/dartres/section_header.html">
+<link rel="import" href="../../packages/core_elements/core_animated_pages.html">
+<link rel="import" href="../../packages/dartres/project_summary.html">
+<link rel="import" href="../../packages/dartres/project_info.html">
 
-<polymer-element name="single-project" attributes="projecttitle githuburl titleimg shortdescription">
+<polymer-element name="single-project" attributes="projecttitle githuburl titleimg shortdescription details">
   <template>
     <style>
       :host {
         display: block;
       }
-     .projectthumb {
-
-       width:50%;
-       padding:2em;
-       margin: auto;
-     }
-     .thumb {
-       width:100%;
-       height:auto;
-     }
-     .projectheader {
-       text-align:center;
-       padding:2em;
-       }
 
        
     </style>
     <res-section>
-      <div vertical layout center>
-        <div class="projectheader">
-          <h3>{{projecttitle}}</h3>
-        </div>
-        <div class="projecturl">
-          <a _href="{{githuburl}}" ></a>
-        </div>
-        <div class="projectthumb" center-center >
-          <img _src="{{titleimg}}" class="thumb" alt="{{projecttitle}}" >
-        </div>
-        <div class="projectdesc">
-          <p>{{shortdescription}}</p>
-        </div>
-      </div>
+      <core-animated-pages selected="0">
+        <section>
+          <project-summary projecttitle="{{projecttitle}}"
+                           githuburl="{{githuburl}}"
+                           titleimg="{{titleimg}}"
+                           shortdescription="{{shortdescription}}">
+          </project-summary>
+        </section>
+        <section>
+          <project-info projecttitle="{{projecttitle}}"
+                        details="{{details}}">
+          </project-info>
+        </section>
+      </core-animated-pages>
     </res-section>
   </template>
   <script type="application/dart" src="single_project.dart"></script>
