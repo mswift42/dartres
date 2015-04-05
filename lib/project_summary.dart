@@ -1,36 +1,42 @@
 import 'package:polymer/polymer.dart';
+// import 'project_model.dart' show SingleProject, projects;
 
 /**
- * A Polymer project-summary element.
+ * A Polymer single-project element.
  */
-@CustomTag('project-summary')
+@CustomTag('single-project')
 
-class ProjectSummary extends PolymerElement {
+class SingleProject extends PolymerElement {
+  // @observable List<SingleProject> singleprojects = toObservable(projects);
+  String projecttitle = '';
+  String githuburl = '';
+  String shortdescription = '';
+  String titleimg = '';
 
-  /// Constructor used to create instance of ProjectSummary.
-  ProjectSummary.created() : super.created() {
+  /// Constructor used to create instance of SingleProject.
+  SingleProject.created() : super.created() {
   }
 
   /*
    * Optional lifecycle methods - uncomment if needed.
    *
 
-  /// Called when an instance of project-summary is inserted into the DOM.
+  /// Called when an instance of single-project is inserted into the DOM.
   attached() {
     super.attached();
   }
 
-  /// Called when an instance of project-summary is removed from the DOM.
+  /// Called when an instance of single-project is removed from the DOM.
   detached() {
     super.detached();
   }
 
   /// Called when an attribute (such as  a class) of an instance of
-  /// project-summary is added, changed, or removed.
+  /// single-project is added, changed, or removed.
   attributeChanged(String name, String oldValue, String newValue) {
   }
 
-  /// Called when project-summary has been fully prepared (Shadow DOM created,
+  /// Called when single-project has been fully prepared (Shadow DOM created,
   /// property observers set up, event listeners attached).
   ready() {
   }

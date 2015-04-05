@@ -1,14 +1,46 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/dartres/res_section.html">
 
-<polymer-element name="project-summary">
+<polymer-element name="single-project" attributes="projecttitle githuburl titleimg shortdescription">
   <template>
     <style>
       :host {
         display: block;
       }
+     .projectthumb {
+
+       width:50%;
+       padding:2em;
+       margin: auto;
+     }
+     .thumb {
+       width:100%;
+       height:auto;
+     }
+     .projectheader {
+       text-align:center;
+       padding:2em;
+       }
+
+       
     </style>
-    <!-- Template content here -->
+    <res-section>
+      <div vertical layout center>
+        <div class="projectheader">
+          <h3>{{projecttitle}}</h3>
+        </div>
+        <div class="projecturl">
+          <a _href="{{githuburl}}" ></a>
+        </div>
+        <div class="projectthumb" center-center >
+          <img _src="{{titleimg}}" class="thumb" alt="{{projecttitle}}" >
+        </div>
+        <div class="projectdesc">
+          <p>{{shortdescription}}</p>
+        </div>
+      </div>
+    </res-section>
   </template>
-  <script type="application/dart" src="project_summary.dart"></script>
+  <script type="application/dart" src="single_project.dart"></script>
 </polymer-element>
