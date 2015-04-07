@@ -6,12 +6,17 @@
 <link rel="import" href="../../packages/dartres/project_summary.html">
 <link rel="import" href="../../packages/dartres/project_info.html">
 
-<polymer-element name="single-project" attributes="projecttitle githuburl titleimg shortdescription details">
+<polymer-element name="single-project" attributes="projecttitle githuburl titleimg shortdescription details detailpic detaileddescription">
   <template>
     <style>
       :host {
         display: block;
       }
+     core-animated-pages .core-selected {
+       position:relative;
+       display:block;
+       }
+
 
        
     </style>
@@ -24,11 +29,13 @@
                            shortdescription="{{shortdescription}}">
           </project-summary>
         </section>
+        <template repeat="{{i in details}}">
         <section>
-          <project-info projecttitle="{{projecttitle}}"
-                        details="{{details}}">
+          <project-info detailpic="{{i.detailpic}}"
+                        detaileddescription="{{i.detaileddescription}}">
           </project-info>
         </section>
+        </template>
       </core-animated-pages>
     </res-section>
   </template>
