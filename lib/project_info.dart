@@ -7,8 +7,8 @@ import 'package:polymer/polymer.dart';
 @CustomTag('project-info')
 
 class ProjectInfo extends PolymerElement {
-  String projecttitle = '';
-  List details = [];
+  String detailpic = '';
+  String detaileddescription = '';
   
 
   /// Constructor used to create instance of ProjectInfo.
@@ -37,8 +37,9 @@ class ProjectInfo extends PolymerElement {
   /// Called when project-info has been fully prepared (Shadow DOM created,
   /// property observers set up, event listeners attached).
   ready() {
-  }
-   
-  */
+
   
+}
+  */
+
 }
