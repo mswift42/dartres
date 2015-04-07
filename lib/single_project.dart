@@ -12,6 +12,8 @@ class SingleProject extends PolymerElement {
   String shortdescription = '';
   String titleimg = '';
   List details = [];
+  String detailpic = '';
+  String detaileddescription = '';
 
   /// Constructor used to create instance of SingleProject.
   SingleProject.created() : super.created() {
